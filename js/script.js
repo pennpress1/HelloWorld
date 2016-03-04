@@ -1,12 +1,12 @@
-/*$(document).ready(function() {
-  alert('Oh, hi there, world');
-   console.log( "ready!" );
-});*/
+
 
 $(document).ready(function() {
 	$("#important-events h1").css({
        backgroundColor: "yellow",
        color: "red" });
+
+	   alert('Oh, hi there, world');
+       console.log( "ready!" );
 
     $("#important-events li:first-child img").hide();
 	$("#important-events > p").css("color","grey");
@@ -17,6 +17,13 @@ $(document).ready(function() {
        color: "white",
        padding:"1em" });
 	$("#important-events li:first-child img").fadeIn(5000);
+
+	$(".spock h1").text("My jQuery Workout");
+	$(".spock h2").text("board with this");
+	$(".spock p").css("width", "300px");
+	$(".spock li:first-child button").text("CLICK ME")
+	$("h1").siblings().children(".text").hide(0);
+	$("#funButton").parent(".button").hide(0);
  });
 
 
