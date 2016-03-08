@@ -31,7 +31,7 @@
 <!--
     function urlCheck() {
         if (
-            window.location.href == "/a.html"
+            window.location.href == "https://pennpress1.github.io/HelloWorld/a.html"
         ) {$("#important-events li:first-child img").hide();
 	       $("#important-events > p").css("color","grey");
 	       $("#important-events li:first-child").css('background-color', 'steelblue');
