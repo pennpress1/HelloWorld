@@ -1,0 +1,25 @@
+<html>
+ <head>
+ </head>
+ <body>
+  <script>
+    var names = ['Jeff', 'Cheryl', 'Misfit', 'Chaos'];
+    var complement = " is awesome!!!" + "<br/>";
+
+    function complementGiver(arr, phrase) {
+        var completed = [];
+        for (var i = 0; i < arr.length; i += 1) {
+            completed.push(arr[i] + phrase)
+        }
+        return completed;
+    }
+
+    document.write(complementGiver(names, complement));
+
+
+    for (var count = 1; count < 6; count++) {
+          	document.write(count + "<br/>");
+         }
+ </script>
+ </body>
+</html>
