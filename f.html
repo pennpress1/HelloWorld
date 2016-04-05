@@ -1,0 +1,35 @@
+<html>
+  <head>
+  </head>
+  <body>
+      <script>
+
+function myFunction() {
+          // pass the promopt input in the var numbered
+          var numbered = prompt("Please enter your number under 100", "example the number 12");
+          // if not a number show alert
+          if (isNaN(numbered)) {
+              alert("Must input numbers");
+              window.onload=myFunction();
+          // if a number convert string number into a number
+          }else{
+              numbered = parseInt(numbered);
+          }
+
+      for (var i = 1; i < numbered; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            document.write("fizz" + " buzz" + "<hr>" + "<br/>" );
+          }else if ( i % 3 === 0 ){
+            document.write("fizz" + "<hr>" + "<br/>" );
+          }else if ( i % 5 === 0 ){
+            document.write("buzz" + "<hr>" + "<br/>" );
+          }else{
+            document.write(i + "<hr>" + "<br/>");
+          }
+     }
+}
+      </script>
+      <body onload="myFunction()">
+  </body> 
+    
+</html>
