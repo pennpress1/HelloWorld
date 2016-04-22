@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+  <style>
+  #draggable-1 { width: 150px; height: 150px; padding: 0.5em; float:left; background-color: green; }
+  #draggable-2 { width: 150px; height: 150px; padding: 0.5em; float:left; background-color: blue;}
+  #draggable-3 { width: 150px; height: 150px; padding: 0.5em; float:left; background-color: red;}
+  #draggable-4 { width: 150px; height: 150px; padding: 0.5em; float:left; background-color: yellow;}
+  .ui-widget-content {background:none;}
+  .draggable { width: 90px; height: 80px; padding: 5px; float: left; margin: 0 10px 10px 0; font-size: .9em; }
+  .ui-widget-header p, .ui-widget-content p { margin: 0; }
+  #snaptarget { height: 350px; width:350px; margin:0 auto; background:none;}
+  </style>
+  <script>
+  $(function() {
+    $( "#draggable-1" ).draggable({ grid: [ 5, 5 ] });
+    $( "#draggable-2" ).draggable({ grid: [ 5, 5 ] });
+    $( "#draggable-3" ).draggable({ grid: [ 5, 5 ] });
+    $( "#draggable-4" ).draggable({ grid: [ 5, 5 ] });
+  });
+  </script>
+
+</head>
+    <body>
+ 
+<div id="snaptarget" class="ui-widget-header">
+</div>
+ 
+<br style="clear:both">
+ 
+<div id="draggable-1" class="draggable ui-widget-content">
+</div>
+ 
+<div id="draggable-2" class="draggable ui-widget-content">
+</div>
+ 
+<div id="draggable-3" class="draggable ui-widget-content">
+</div>
+ 
+<div id="draggable-4" class="draggable ui-widget-content">
+</div>
+ 
+ 
+ 
+</body>

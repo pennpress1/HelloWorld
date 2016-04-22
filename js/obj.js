@@ -7,3 +7,29 @@ var post = {
   comments3: "Solo",
   picture: "x-wing"
 };
+
+var House = {
+    bathrooms: "1",
+    bedrooms: "2"
+};
+
+House.bathrooms
+House.bedrooms
+
+
+var mansion = Object.create(House); // create an mansion object, inheriting from the House class
+
+mansion.bathrooms = 2;
+mansion.bedrooms = 4;
+
+mansion.bathrooms
+mansion.bedrooms
+
+
+var castle = Object.create(House); // create an castle object, inheriting from the House class
+
+castle.bathrooms = 3;
+castle.bedrooms = 5;
+
+castle.bathrooms
+castle.bedrooms
