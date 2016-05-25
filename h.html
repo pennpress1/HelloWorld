@@ -4,26 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/script.js"></script>
 
     <script type="text/javascript">
         // blank input array
-        var number = []
-
-
+        var number = [];
 
         // myFunction is called on click of the html button
         function myFunction() {
+            // for loop transfer string to number
+            for (var i=0; i<number.length; i++) {
+                number[i] = parseInt(number[i]);
+            }
+
             // this is a check if the array has 6 numbers
             if (number.length > 5) {
-               number.length = 5;
-               alert("you are limited to 6 numbers");
-            // the else pushes the numbers into the array. The get elment by id posts the numbers in the div so the user can the array.
-           }else{
-            var x = document.getElementById("numbers");
-            number.push(document.getElementById("input").value);
-            x.innerHTML = number.join(', ');
-           }
+                number.length = 5;
+                alert("you are limited to 6 numbers");
+                // the else pushes the numbers into the array. The get elment by id posts the numbers in the div so the user can the array.
+            } else {
+                var x = document.getElementById("numbers");
+                number.push(document.getElementById("input").value);
+                x.innerHTML = number.join(', ');
+            }
         }
+
+        function getSum(total, num) {
+            return total + num;
+        }
+
+        function arraySum(item) {
+            document.getElementById("sum").innerHTML = number.reduce(getSum);
+        }
+
+
 
     </script>
 
@@ -34,9 +49,11 @@
     <form>
         <input id="input" type=text>
         <input type=button onclick="myFunction();this.form.reset();" value="Add Number" />
+        <div id="numbers"></div>
+    
+        <button onclick="arraySum()">Sum the array</button>
+        <div id="sum"></div>
     </form>
-
-    <div id="numbers"></div>
 
 
 </body>
